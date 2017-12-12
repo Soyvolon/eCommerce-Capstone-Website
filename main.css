@@ -1,0 +1,60 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Space+Mono|VT323');
+/*
+font-family: 'Space Mono', monospace;
+font-family: 'VT323', monospace;
+*/
+/* CSS */
+body {
+	font-family: 'Space Mono', monospace;
+}
+
+.header {
+	font-family: 'VT323', monospace;
+	color: white;
+}
+.header h1 {
+	margin-top: 0px;
+	letter-spacing: 0.1em;
+	text-align: center;
+}
+/* Replace with single CSS style -- use for logo image */
+#topLeft {
+	width:10%;
+	height:30px;
+	background: black;
+	margin: 0px;
+	position: absolute;
+	left: 0px;
+	top:0px;
+}
+#bottomLeft {
+	width:10%;
+	height:30px;
+	background: black;
+	margin: 0px;
+	position: absolute;
+	left: 0px;
+	top:31px;
+	border-top:1px white;
+}
+/*-|-*/
+#topRight {
+	width: 85%;
+	height: 30px;
+	background: black;
+	margin: 0px;
+	position: absolute;
+	right:0px;
+	top:0px;
+}
+#bottomRight {
+	width:85%;
+	height: 30px;
+	background: black;
+	margin:0px;
+	position: absolute;
+	right:0px;
+	top:31px;
+	border-top:1px white;
+}

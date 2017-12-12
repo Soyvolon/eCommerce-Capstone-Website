@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<!-- Andrew Boudns | Period 2 | eCommerce Capstone Project -->
+		<title>TechStar Computers | 9276666 Bounds</title>
+		<link href="main.css" rel="stylesheet" type="text/css" />
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+		<script>
+			$(document).ready(function(){
+				$("#topRight").hide();
+				$("#bottomRight").hide();
+
+				$("#bottomLeft").hover(function(){
+					$("topRight").show(500);
+				},
+				function(){
+					$("topRight").hide(500);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<!-- temp head - - repalce with logo -->
+			<div id="topLeft" class="header">
+				<h1>Tech</h1>
+			</div>
+			<div id="bottomLeft" class="header">
+				<h1>Star <img src="index/star.png" width="25px" height="25px"/></h1>
+			</div>
+			<!-- - - - - - - - - - - -->
+			<div id="topRight" class="header">
+			</div>
+			<div id="bottomRight" class="header">
+			</div>
+
+			
+		</div>
+	</body>
+</html>
