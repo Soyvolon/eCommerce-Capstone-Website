@@ -7,35 +7,55 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		
 		<script>
-			$(document).ready(function(){
-				$("#topRight").hide();
-				$("#bottomRight").hide();
+			function onLoad() {
+				var x = document.getElementById("headRight");
+			    x.style.display = "none";
+			    x.style.widht = "200px";
+			}
 
-				$("#bottomLeft").hover(function(){
-					$("topRight").show(500);
-				},
-				function(){
-					$("topRight").hide(500);
-				});
-			});
+
 		</script>
 	</head>
-	<body>
+	<body onLoad="onLoad()">
 		<div>
-			<!-- temp head - - repalce with logo -->
-			<div id="topLeft" class="header">
-				<h1>Tech</h1>
-			</div>
-			<div id="bottomLeft" class="header">
-				<h1>Star <img src="index/star.png" width="25px" height="25px"/></h1>
-			</div>
-			<!-- - - - - - - - - - - -->
-			<div id="topRight" class="header">
-			</div>
-			<div id="bottomRight" class="header">
-			</div>
-
+			<!-- Slideshow -->
 			
+			<!-- END of Slideshow -->
+
+			<!-- Header -->
+			<div id="mainHead" class="header">
+				<img id="logo" src="index/logo.png" width="200" height="60" />
+			
+				<!-- - - - - - - - - - - -->
+				<div id="headRight" class="header">
+					<table>
+						<tr>
+							<th><h1>Home</h1></th>
+							<th><h1>About Us</h1></th>
+							<th><h1>Catalog</h1></th>
+							<th><h1>Contact Us</h1></th>
+						</tr>
+					</table>
+				</div>
+				<script>
+					document.getElementById("mainHead").addEventListener("mouseover", showHead);
+					document.getElementById("mainHead").addEventListener("mouseout", hideHead);
+
+					function showHead() {
+						var x = document.getElementById("headRight").style.display= "";
+						x.style.width= "100%";
+					}
+					function hideHead() {
+						var x = document.getElementById("headRight").style.display = "none"
+						x.style.width = "200px";
+					}
+				</script>
+			</div>
+			<!-- END of Header -->
+
+			<!-- Index Body -->
+
+			<!-- END of Index Body -->
 		</div>
 	</body>
 </html>
