@@ -7,45 +7,123 @@ font-family: 'VT323', monospace;
 /* CSS */
 body {
 	font-family: 'Space Mono', monospace;
+	margin: 0px;
 }
 
 .header {
-	font-family: 'VT323', monospace;
 	color: white;
 	position: sticky;
+	cursor: pointer;
 }
 .header h1 {
-	margin-top: 0px;
+	font-family: 'VT323', monospace;
 	letter-spacing: 0.1em;
 	text-align: center;
 	color: white;
+	padding: 2px;
+	margin: auto;
 }
 .header table {
-	height: 25px;
-	width:70%;
+	height: 100%;
+	width: 100%;
 }
 .header th {
 	border: 1px solid white;
 	border-radius: 5px;
 	width: 25%;
+	margin: 2px;
+	box-shadow: 1px 1px 10px red;
+}
+.header th h1:hover {
+	color: red;
 }
 /* Replace with single CSS style -- use for logo image */
 #mainHead {
 	width:100%;
-	height:60px;
+	height:66px;
 	padding-bottom: 2px;
 	margin: 0px;
 	left: 0px;
 	top:0px;
+	background: black;
+	border: 3px solid red;
+}
+#mainHead img {
+	text-align: center;
+	margin: auto;
+	float: center;
+	display: block;	
 }
 /*-|-*/
 #headRight {
 	width: 100%;
 	height: 60px;
 	background: black;
-	margin: 0px;
+	margin: 0px 0px 10px 0px;
 	top:0px;
-	position: absolute;
-	border-radius:10px;
+	border: 2px inset red;	
+	position: sticky;
 	display: inline-block;
+}
+
+#indexhead {
+	height: 80%;
+	border: 15px outset red;
+}
+/* Index Body Stuff */
+.mainBody {
+	background: black;
+	padding: 5px;
+	width: 90%;
+	border-radius: 20px;
+	box-shadow: -1px -1px 10px black;
+	margin: auto;
+
+}
+.centerBox {
+	margin: auto;
+	text-align: center;
+}
+.sectionBox {
+	background: white;
+	color: black;
+	font-family: 'Space Mono', monospace;
+	width: 30%;
+	height: 100%;
+	display: inline-flex;	
+	padding: 3px;
+	margin: 15px 5px;
+	visibility: hidden;
+	border-radius: 15px;
+	box-shadow: 1px 1px 20px grey;
+}
+.sectionBox h1 {
+	font-family: 'VT323', monospace;
+	letter-spacing: 0.1em;
+	text-align: center;
+	margin: 2px auto;
+	
+}
+	#box1 {
+
+	}
+	#box2 {
+
+	}
+	#box3 {
+
+	}
+#titleBar {
+	background: black;
+	width: 80%;
+	box-shadow: -1px -1px 10px black;
+	border-radius: 20px;
+	margin: auto;
+}
+#titleBar h1 {
+	font-family: 'VT323', monospace;
+	letter-spacing: 0.1em;
+	text-align: center;
+	color: white;
+	padding: 2px;
 }

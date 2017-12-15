@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<!-- Andrew Boudns | Period 2 | eCommerce Capstone Project -->
+		<title>TechStar Computers | 9276666 Bounds</title>
+		<link href="main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="w3.css">
+		<link href="cat.css" rel="stylesheet" type="text/css" />
+
+
+		<style>@import url('https://fonts.googleapis.com/css?family=Space+Mono|VT323');</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+		<script type="text/javascript">
+			function onLoad() {
+				var x = document.getElementById("headRight");
+			    x.style.display = "none";
+			    x.style.widht = "200px";
+			}
+
+			// Scroll to specific values
+			function scrollto(point) {
+				// scrollTo is the same
+				window.scroll({
+				  top: point, 
+				  left: 0, 
+				  behavior: 'smooth' 
+				});
+			}
+			function scrollby(distance) {
+				// Scroll certain amounts from current position 
+				window.scrollBy({ 
+				  top: distance, // could be negative value
+				  left: 0, 
+				  behavior: 'smooth' 
+				});
+			}
+			function indoc(id) {
+				// Scroll to a certain element
+				document.querySelector(id).scrollIntoView({ 
+				  block: "start",
+				  inline: "nearest",
+				  behavior: 'smooth'
+				});
+			}
+			//Navagation bar functions
+			function openNav() {
+			    document.getElementById("sideNav").style.width = "15%";
+			    document.getElementById("galmenu").style.opacity = 0;
+			}
+			function closeNav() {
+			    document.getElementById("sideNav").style.width = "0%";
+			    document.getElementById("galmenu").style.opacity = 1;
+			}
+
+			function openDoc(doc) {
+				window.location.href = doc;
+			}
+		</script>
+	</head>
+	<body onLoad="">
+		<div>
+			<!-- Header -->
+			<div id="mainHead" class="header" onClick="openDoc('index.htm')">
+				<img id="logo" src="index/logo2.png" width="480px" height="60px" />
+			</div>
+				<!-- - - - - - - - - - - -->
+			<div id="headRight" class="header" style="position: sticky;">
+				<table>
+					<tr>
+						<th onClick="openDoc('index.htm')"><h1>Home</h1></th>
+						<th onClick="openDoc('about.htm')"><h1>About Us</h1></th>
+						<th onClick="openDoc('catalog.htm')"><h1>Catalog</h1></th>
+						<th onClick="openDoc('contact.htm')"><h1>Contact Us</h1></th>
+					</tr>
+				</table>
+			</div>
+			<!-- END of Header -->
+
+			<div id="titleBar">
+				<h1>Catalog</h1>
+			</div>
+
+			<!-- Index Body -->
+			<div class="mainBody">
+				<div id="catTopBanner" class="catsec">
+					<img id="topBanSqr" src="catalog/topBanSqr.png" />
+					<p id="topBanText">
+					</p>
+					<img class="w3-circle" id="topBanCirc" src="catalog/topBanCirc.png" />
+				</div>
+				<div id="catDeals" class="catsec">	
+					<div>
+						<br />
+					</div>
+
+					<div>
+						<br />
+					</div>
+					<div>
+						<br />
+					</div>
+				</div>
+				<div id="catItems" class="catsec">
+					<div class="catItemList">
+						<br />
+					</div>
+					<div class="catItemList">
+						<br />
+					</div>
+				</div>
+			</div>
+			<!-- END of Index Body -->
+		</div>
+	</body>
+</html>

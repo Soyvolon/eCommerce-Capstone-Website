@@ -3,59 +3,212 @@
 		<!-- Andrew Boudns | Period 2 | eCommerce Capstone Project -->
 		<title>TechStar Computers | 9276666 Bounds</title>
 		<link href="main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="w3.css">
 
+
+		<style>@import url('https://fonts.googleapis.com/css?family=Space+Mono|VT323');</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		
-		<script>
+		<script type="text/javascript">
 			function onLoad() {
 				var x = document.getElementById("headRight");
 			    x.style.display = "none";
 			    x.style.widht = "200px";
 			}
 
+			// Scroll to specific values
+			function scrollto(point) {
+				// scrollTo is the same
+				window.scroll({
+				  top: point, 
+				  left: 0, 
+				  behavior: 'smooth' 
+				});
+			}
+			function scrollby(distance) {
+				// Scroll certain amounts from current position 
+				window.scrollBy({ 
+				  top: distance, // could be negative value
+				  left: 0, 
+				  behavior: 'smooth' 
+				});
+			}
+			function indoc(id) {
+				// Scroll to a certain element
+				document.querySelector(id).scrollIntoView({ 
+				  block: "start",
+				  inline: "nearest",
+				  behavior: 'smooth'
+				});
+			}
+			//Navagation bar functions
+			function openNav() {
+			    document.getElementById("sideNav").style.width = "15%";
+			    document.getElementById("galmenu").style.opacity = 0;
+			}
+			function closeNav() {
+			    document.getElementById("sideNav").style.width = "0%";
+			    document.getElementById("galmenu").style.opacity = 1;
+			}
 
+			function openDoc(doc) {
+				window.location.href = doc;
+			}
+		</script>
+		<script>
+			$(window).scroll(function () {
+			    console.log($(window).scrollTop());
+			    var topDivHeight = $(".header").height();
+			    var viewPortSize = $(window).height();
+
+			    var triggerAt = 750;
+			    var triggerHeight = (topDivHeight - viewPortSize) + triggerAt;
+
+			    if ($(window).scrollTop() >= triggerHeight) {
+			        $('.sectionBox').css('visibility', 'visible').hide().fadeIn(3000);
+			        $(this).off('scroll');
+			    }
+			});
 		</script>
 	</head>
-	<body onLoad="onLoad()">
+	<body onLoad="">
 		<div>
-			<!-- Slideshow -->
 			
+			<!-- Sidehow section -->
+		<!-- https://www.w3schools.com/w3css/w3css_slideshow.asp -->
+			<div id="indexhead">
+				<div class="w3-contentNMW w3-display-container">
+					<div class="w3-display-container headSlides w3-animate-fading">
+						<img src="homeslides/01.jpg" style="width:100%;"/>
+						<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black-transparent">
+						    <h1>Travel to Japan!</h1><hr />
+						    <h4></h4><button class="w3-button" onclick="indoc('#home')">Travel Today</button>
+						</div>
+					</div>
+					
+					<div class="w3-display-container headSlides w3-animate-fading">
+						<img src="homeslides/02.jpg" style="width:100%;"/>
+						<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black-transparent">
+						    <h1>The Facts We Share</h1><hr />
+						    <h4></h4><button class="w3-button" onclick="indoc('#info')">To info</button>
+						</div>
+					</div>
+					
+					<div class="w3-display-container headSlides w3-animate-fading">
+						<img src="homeslides/03.jpg" style="width:100%;"/>
+						<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black-transparent">
+						    <h1>The Places You Need to See</h1><hr />
+						    <h4></h4><button class="w3-button" onclick="indoc('#locations')">To locations</button>
+						</div>
+					</div>
+					
+					<div class="w3-display-container headSlides w3-animate-fading">
+						<img src="homeslides/04.jpg" style="width:100%;"/>
+						<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black-transparent">
+						    <h1>The People Build the Town</h1><hr />
+						    <h4></h4><button class="w3-button" onclick="indoc('#culture')">To culture</button>
+						</div>
+					</div>
+					
+					<div class="w3-display-container headSlides w3-animate-fading">
+						<img src="homeslides/05.jpg" style="width:100%;"/>
+						<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black-transparent">
+						    <h1>Travel to Kyoto!</h1><hr />
+						    <h4></h4><button class="w3-button" onclick="indoc('#travel')">To travel</button>
+						</div>
+					</div>
+					
+					<div class="w3-display-container headSlides w3-animate-fading">
+						<img src="homeslides/06.jpg" style="width:100%;"/>
+						<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black-transparent">
+						    <h1>View Our Extensive Gallery</h1><hr />
+						    <h4></h4><button class="w3-button" onclick="indoc('#gallery')">To photos</button>
+						</div>
+					</div>
+					
+					<div class="w3-display-container headSlides w3-animate-fading">
+						<img src="homeslides/07.jpg" style="width:100%;"/>
+						<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black-transparent">
+						    <h1>Frequently Asked Questions</h1><hr />
+						    <h4></h4><button class="w3-button" onclick="indoc('#faq')">To FAQs</button>
+						</div>
+					</div>
+					
+					<div class="w3-display-container headSlides w3-animate-fading">
+						<img src="homeslides/08.jpg" style="width:100%;"/>
+						<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black-transparent">
+						    <h1>Finding my Infomation</h1><hr />
+						    <h4></h4><button class="w3-button" onclick="indoc('#ref')">To Research</button>
+						</div>
+					</div>
+					
+					<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+				</div>
+				<!--Sideshow Javascript -->
+				<script>
+					var myIndex = 0;
+					carousel();
+					function carousel() {
+					    var i;
+					    var x = document.getElementsByClassName("headSlides");
+					    for (i = 0; i < x.length; i++) {
+					       x[i].style.display = "none";  
+					    }
+					    myIndex++;
+					    if (myIndex > x.length) {myIndex = 1}    
+					    x[myIndex-1].style.display = "block";  
+					    setTimeout(carousel, 9000);    
+					}
+					showDivs(myIndex);
+					function plusDivs(n) {
+					  showDivs(myIndex += n);
+					}
+					function showDivs(n) {
+					  var i;
+					  var x = document.getElementsByClassName("headSlides");
+					  if (n > x.length) {myIndex = 1}    
+					  if (n < 1) {myIndex = x.length}
+					  for (i = 0; i < x.length; i++) {
+					     x[i].style.display = "none";  
+					  }
+					  x[myIndex-1].style.display = "block";  
+					}
+				</script>
+			</div>
 			<!-- END of Slideshow -->
 
 			<!-- Header -->
-			<div id="mainHead" class="header">
-				<img id="logo" src="index/logo.png" width="200" height="60" />
-			
+			<div id="mainHead" class="header" style="margin-top: 25px;" onClick="openDoc('index.htm')">
+				<img id="logo" src="index/logo2.png" width="480px" height="60px" />
+			</div>
 				<!-- - - - - - - - - - - -->
-				<div id="headRight" class="header">
-					<table>
-						<tr>
-							<th><h1>Home</h1></th>
-							<th><h1>About Us</h1></th>
-							<th><h1>Catalog</h1></th>
-							<th><h1>Contact Us</h1></th>
-						</tr>
-					</table>
-				</div>
-				<script>
-					document.getElementById("mainHead").addEventListener("mouseover", showHead);
-					document.getElementById("mainHead").addEventListener("mouseout", hideHead);
-
-					function showHead() {
-						var x = document.getElementById("headRight").style.display= "";
-						x.style.width= "100%";
-					}
-					function hideHead() {
-						var x = document.getElementById("headRight").style.display = "none"
-						x.style.width = "200px";
-					}
-				</script>
+			<div id="headRight" class="header" style="position: sticky;">
+				<table>
+					<tr>
+						<th onClick="openDoc('index.htm')"><h1>Home</h1></th>
+						<th onClick="openDoc('about.htm')"><h1>About Us</h1></th>
+						<th onClick="openDoc('catalog.htm')"><h1>Catalog</h1></th>
+						<th onClick="openDoc('contact.htm')"><h1>Contact Us</h1></th>
+					</tr>
+				</table>
 			</div>
 			<!-- END of Header -->
 
 			<!-- Index Body -->
-
+			<div class="mainBody">
+				<div class="centerBox">
+					<div id="box1" class="sectionBox">
+						<h1>Placeholder</h1>
+					</div>
+					<div id="box2" class="sectionBox">
+						<h1>Placeholder</h1>
+					</div>
+					<div id="box3" class="sectionBox">
+						<h1>Placeholder</h1>
+					</div>
+				</div>
+			</div>
 			<!-- END of Index Body -->
-		</div>
 	</body>
 </html>
