@@ -14,8 +14,60 @@ font-family: 'VT323', monospace;
 	margin: 15px auto;
 	box-shadow: 1px 1px 10px grey;
 }
+.catDealSec {
+	border: 2px solid black;
+	background: grey;
+	border-radius: 15px;
+	width: 30%;
+	height: 30%;
+	margin: 10px auto;
+	box-shadow: -1px -1px 10px black;
+	display: inline-block;
+}
+.catDealSec button {
+	display: inline;
+	position: relative;
+	float: right;
+	margin: 5%;
+	border-radius: 10px;
+}
 .catItemList {
-	
+	border: 2px solid black;
+	background: grey;
+	border-radius: 15px;
+	width: 90%;
+	height: 20%;
+	margin: 10px auto;
+	box-shadow: -1px -1px 10px black;
+	display: block;
+}
+.catComputerList {
+	border: 2px solid black;
+	border-radius: 20px;
+	box-shadow: 1px 1px 10px grey;
+	margin: 10px;
+	padding: 5px;
+	/*text-align: right;*/
+}
+.catComputerList .catPrice {
+	text-align: center;
+	margin: 10px;
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: -1px -1px 10px grey;
+	padding: 5px;
+	width: 10%;
+	display: inline-block;
+}
+.catComputerList h2 {
+	text-align: left;
+	width: 70%;
+	height: auto;
+	display: inline-block;
+}
+.catComputerList button {
+	display: inline;
+	margin: 5px;
 }
 /* -- */
 #catTopBanner {
@@ -24,6 +76,15 @@ font-family: 'VT323', monospace;
 #catDeals {
 
 }
-#catItmes {
+#catDeal1 {
+
+}
+#catDeal2 {
+
+}
+#catDeal3 {
+
+}
+#catItems {
 
 }

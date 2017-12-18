@@ -84,6 +84,10 @@ body {
 	margin: auto;
 	text-align: center;
 }
+.rightalign {
+	text-align: right;
+	margin: auto;
+}
 .sectionBox {
 	background: white;
 	color: black;
