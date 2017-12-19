@@ -1,0 +1,193 @@
+<html>
+	<head>
+		<!-- Andrew Boudns | Period 2 | eCommerce Capstone Project -->
+		<title>TechStar Computers: Delta | 9276666 Bounds</title>
+		<link href="main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="w3.css">
+		<link href="cat.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<style>@import url('https://fonts.googleapis.com/css?family=Space+Mono|VT323');</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<script type="text/javascript">
+			function onLoad() {
+				var x = document.getElementById("headRight");
+			    x.style.display = "none";
+			    x.style.widht = "200px";
+			}
+
+			// Scroll to specific values
+			function scrollto(point) {
+				// scrollTo is the same
+				window.scroll({
+				  top: point, 
+				  left: 0, 
+				  behavior: 'smooth' 
+				});
+			}
+			function scrollby(distance) {
+				// Scroll certain amounts from current position 
+				window.scrollBy({ 
+				  top: distance, // could be negative value
+				  left: 0, 
+				  behavior: 'smooth' 
+				});
+			}
+			function indoc(id) {
+				// Scroll to a certain element
+				document.querySelector(id).scrollIntoView({ 
+				  block: "start",
+				  inline: "nearest",
+				  behavior: 'smooth'
+				});
+			}
+			//Navagation bar functions
+			function openNav() {
+			    document.getElementById("sideNav").style.width = "15%";
+			    document.getElementById("galmenu").style.opacity = 0;
+			}
+			function closeNav() {
+			    document.getElementById("sideNav").style.width = "0%";
+			    document.getElementById("galmenu").style.opacity = 1;
+			}
+
+			function openDoc(doc) {
+				window.location.href = doc;
+			}
+
+			function setCookie(cname,cvalue,exdays) {
+			    var d = new Date();
+			    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+			    var expires = "expires=" + d.toGMTString();
+			    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+
+			function getCookie(cname) {
+			    var name = cname + "=";
+			    var decodedCookie = decodeURIComponent(document.cookie);
+			    var ca = decodedCookie.split(';');
+			    for(var i = 0; i < ca.length; i++) {
+			        var c = ca[i];
+			        while (c.charAt(0) == ' ') {
+			            c = c.substring(1);
+			        }
+			        if (c.indexOf(name) == 0) {
+			            return c.substring(name.length, c.length);
+			        }
+			    }
+			    return "";
+			}
+
+			function start() {
+				var compType;
+				if (typeof(Storage) !== "undefined") {
+					    // Code for localStorage/sessionStorage.
+					    compType = localStorage.getItem("compType");
+					} else {
+					    // Sorry! No Web Storage support..
+					    compType =  getCookie("compType");
+					}
+				if (compType != "") {
+					switch (compType) {
+						case "cv1":
+							document.getElementById("cv1").style.display = '';
+
+							document.getElementById("cv2").style.display = 'none';
+
+							document.getElementById("cv3").style.display = 'none';
+
+							document.getElementById("cv4").style.display = 'none';
+							break;
+
+						case "cv2":
+							document.getElementById("cv1").style.display = 'none';
+
+							document.getElementById("cv2").style.display = '';
+
+							document.getElementById("cv3").style.display = 'none';
+
+							document.getElementById("cv4").style.display = 'none';
+							break;
+
+						case "cv3":
+							document.getElementById("cv1").style.display = 'none';
+
+							document.getElementById("cv2").style.display = 'none';
+
+							document.getElementById("cv3").style.display = '';
+
+							document.getElementById("cv4").style.display = 'none';
+							break;
+
+						case "cv4":
+							document.getElementById("cv1").style.display = 'none';
+
+							document.getElementById("cv2").style.display = 'none';
+
+							document.getElementById("cv3").style.display = 'none';
+
+							document.getElementById("cv4").style.display = '';
+							break;
+					}
+				} else {
+					document.getElementById("cv1").style.display = '';
+
+					document.getElementById("cv2").style.display = 'none';
+
+					document.getElementById("cv3").style.display = 'none';
+
+					document.getElementById("cv4").style.display = 'none';
+				}
+				if (typeof(Storage) !== "undefined") {
+					    // Code for localStorage/sessionStorage.
+					    localStorage.setItem("compType", "");
+					} else {
+					    // Sorry! No Web Storage support..
+					    compType =  setCookie("compType", "", 0);
+					}
+			}
+		</script>
+	</head>
+	<body onLoad="start()">
+		<div>
+			<!-- Header -->
+			<div id="mainHead" class="header" onClick="openDoc('index.htm')">
+				<img id="logo" src="index/logo2.png" width="480px" height="60px" />
+			</div>
+				<!-- - - - - - - - - - - -->
+			<div id="headRight" class="header" style="position: sticky;">
+				<table>
+					<tr>
+						<th onClick="openDoc('index.htm')"><h1>Home</h1></th>
+						<th onClick="openDoc('about.htm')"><h1>About Us</h1></th>
+						<th onClick="openDoc('catalog.htm')"><h1>Catalog</h1></th>
+						<th onClick="openDoc('contact.htm')"><h1>Contact Us</h1></th>
+					</tr>
+				</table>
+			</div>
+			<!-- END of Header -->
+
+			<div id="titleBar">
+				<h1>TechStar: Delta</h1>
+			</div>
+
+			<!-- Index Body -->
+			<div class="mainBody">
+				<div id="cv1">
+					<h1>Delta Version 1</h1>
+				</div>
+				<div id="cv2">
+					<h1>Delta Version 2</h1>
+				</div>
+				<div id="cv3">
+					<h1>Delta Version 3</h1>
+				</div>
+				<div id="cv4">
+					<h1>Delta Version 4</h1>
+				</div>
+			</div>
+		</div>
+	</body>	
+</html>
