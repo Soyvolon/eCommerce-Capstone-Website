@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<!-- Andrew Boudns | Period 2 | eCommerce Capstone Project -->
-		<title>TechStar Computers: Cobalt | 9276666 Bounds</title>
+		<title>TechStar Computers: [computer] | 9276666 Bounds</title>
 		<link href="main.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="w3.css">
 		<link href="cat.css" rel="stylesheet" type="text/css" />
@@ -11,6 +11,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		
+		<script type="text/javascript" src="cat.js"></script>
 		<script type="text/javascript">
 			function onLoad() {
 				var x = document.getElementById("headRight");
@@ -57,97 +58,9 @@
 				window.location.href = doc;
 			}
 
-			function setCookie(cname,cvalue,exdays) {
-			    var d = new Date();
-			    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-			    var expires = "expires=" + d.toGMTString();
-			    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-			}
+			
 
-			function getCookie(cname) {
-			    var name = cname + "=";
-			    var decodedCookie = decodeURIComponent(document.cookie);
-			    var ca = decodedCookie.split(';');
-			    for(var i = 0; i < ca.length; i++) {
-			        var c = ca[i];
-			        while (c.charAt(0) == ' ') {
-			            c = c.substring(1);
-			        }
-			        if (c.indexOf(name) == 0) {
-			            return c.substring(name.length, c.length);
-			        }
-			    }
-			    return "";
-			}
-
-			function start() {
-				var compType;
-				if (typeof(Storage) !== "undefined") {
-					    // Code for localStorage/sessionStorage.
-					    compType = localStorage.getItem("compType");
-					} else {
-					    // Sorry! No Web Storage support..
-					    compType =  getCookie("compType");
-					}
-				if (compType != "") {
-					switch (compType) {
-						case "cv1":
-							document.getElementById("cv1").style.display = '';
-
-							document.getElementById("cv2").style.display = 'none';
-
-							document.getElementById("cv3").style.display = 'none';
-
-							document.getElementById("cv4").style.display = 'none';
-							break;
-
-						case "cv2":
-							document.getElementById("cv1").style.display = 'none';
-
-							document.getElementById("cv2").style.display = '';
-
-							document.getElementById("cv3").style.display = 'none';
-
-							document.getElementById("cv4").style.display = 'none';
-							break;
-
-						case "cv3":
-							document.getElementById("cv1").style.display = 'none';
-
-							document.getElementById("cv2").style.display = 'none';
-
-							document.getElementById("cv3").style.display = '';
-
-							document.getElementById("cv4").style.display = 'none';
-							break;
-
-						case "cv4":
-							document.getElementById("cv1").style.display = 'none';
-
-							document.getElementById("cv2").style.display = 'none';
-
-							document.getElementById("cv3").style.display = 'none';
-
-							document.getElementById("cv4").style.display = '';
-							break;
-					}
-				} else {
-					document.getElementById("cv1").style.display = '';
-
-					document.getElementById("cv2").style.display = 'none';
-
-					document.getElementById("cv3").style.display = 'none';
-
-					document.getElementById("cv4").style.display = 'none';
-				}
-				if (typeof(Storage) !== "undefined") {
-					    // Code for localStorage/sessionStorage.
-					    localStorage.setItem("compType", "");
-					} else {
-					    // Sorry! No Web Storage support..
-					    compType =  setCookie("compType", "", 0);
-					}
-			}
+			
 		</script>
 	</head>
 	<body onLoad="start()">
@@ -170,22 +83,106 @@
 			<!-- END of Header -->
 
 			<div id="titleBar">
-				<h1>TechStar: Cobalt</h1>
+				<h1>TechStar: [computer]</h1>
 			</div>
 
 			<!-- Index Body -->
 			<div class="mainBody">
-				<div id="cv1">
-					<h1>Cobalt Version 1</h1>
+				<div id="cv1" class="cvdiv">
+					<h1>[computer] Version 1</h1>
+					<div class="leftbox">
+						<div class="centerbox">
+							<img src="computer info/[comppic].250x.png" class="coverImage" />
+						</div>
+						<div class="itemList">
+							<ul>
+								<li style="background: black; color: white;">[computer] Version 1</li>
+								<li onclick="changeComp('cv2')">[computer] Version 2</li>
+								<li onclick="changeComp('cv3')">[computer] Version 3</li>
+								<li onclick="changeComp('cv4')">[computer] Version 4</li>
+							</ul>
+						</div>
+					</div>
+					<div class="rightbox">
+						<form id="formcv1">
+							<label>[computer] Version 1</label>
+							<fieldset id="cv1Base" class="baseFieldset">
+								
+							</fieldset>
+						</form>
+					</div>
 				</div>
-				<div id="cv2">
-					<h1>Cobalt Version 2</h1>
+				<div id="cv2" class="cvdiv">
+					<h1>[computer] Version 2</h1>
+					<div class="leftbox">
+						<div class="centerbox">
+							<img src="computer info/[comppic].250x.png" class="coverImage" />
+						</div>
+						<div class="itemList">
+							<ul>
+								<li onclick="changeComp('cv1')">[computer] Version 1</li>
+								<li style="background: black; color: white;">[computer] Version 2</li>
+								<li onclick="changeComp('cv3')">[computer] Version 3</li>
+								<li onclick="changeComp('cv4')">[computer] Version 4</li>
+							</ul>
+						</div>
+					</div>
+					<div class="rightbox">
+						<form id="formcv1">
+							<label>[computer] Version 1</label>
+							<fieldset id="cv1Base" class="baseFieldset">
+								
+							</fieldset>
+						</form>
+					</div>
 				</div>
-				<div id="cv3">
-					<h1>Cobalt Version 3</h1>
+				<div id="cv3" class="cvdiv">
+					<h1>[computer] Version 3</h1>
+					<div class="leftbox">
+						<div class="centerbox">
+							<img src="computer info/[comppic].250x.png" class="coverImage" />
+						</div>
+						<div class="itemList">
+							<ul>
+								<li onclick="changeComp('cv1')">[computer] Version 1</li>
+								<li onclick="changeComp('cv2')">[computer] Version 2</li>
+								<li style="background: black; color: white;">[computer] Version 3</li>
+								<li onclick="changeComp('cv4')">[computer] Version 4</li>
+							</ul>
+						</div>
+					</div>
+					<div class="rightbox">
+						<form id="formcv1">
+							<label>[computer] Version 1</label>
+							<fieldset id="cv1Base" class="baseFieldset">
+								
+							</fieldset>
+						</form>
+					</div>
 				</div>
-				<div id="cv4">
-					<h1>Cobalt Version 4</h1>
+				<div id="cv4" class="cvdiv">
+					<h1>[computer] Version 4</h1>
+					<div class="leftbox">
+						<div class="centerbox">
+							<img src="computer info/[comppic].250x.png" class="coverImage" />
+						</div>
+						<div class="itemList">
+							<ul>
+								<li onclick="changeComp('cv1')">[computer] Version 1</li>
+								<li onclick="changeComp('cv2')">[computer] Version 2</li>
+								<li onclick="changeComp('cv3')">[computer] Version 3</li>
+								<li style="background: black; color: white;">[computer] Version 4</li>
+							</ul>
+						</div>
+					</div>
+					<div class="rightbox">
+						<form id="formcv1">
+							<label>[computer] Version 1</label>
+							<fieldset id="cv1Base" class="baseFieldset">
+								
+							</fieldset>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
