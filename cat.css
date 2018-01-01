@@ -31,12 +31,16 @@ font-family: 'VT323', monospace;
 	margin: 5%;
 	border-radius: 10px;
 }
+.catDealSec h1 {
+	margin: 0px;
+	color: white;
+}
 .catItemList {
 	border: 2px solid black;
 	background: grey;
 	border-radius: 15px;
 	width: 90%;
-	height: 20%;
+	height: auto;
 	margin: 10px auto;
 	box-shadow: -1px -1px 10px black;
 	display: block;
@@ -86,7 +90,7 @@ font-family: 'VT323', monospace;
 
 }
 #catItems {
-
+	color: white;
 }
 /* -- Individual Items -- */
 .cvdiv {
@@ -128,5 +132,24 @@ font-family: 'VT323', monospace;
 	height: auto;
 	margin: auto;
 	display: inline-block;
+	color: white;
 }
-
+.prehips {
+	background: black;
+	overflow: hidden;
+	display: block;
+	margin: 15px auto;
+}
+.prehips option {
+	border: 1px solid white;
+}
+input {
+	background: black;
+}
+.techspecs {
+	background: black;
+}
+button {
+	color: white;
+	background: black;
+}
